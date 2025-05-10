@@ -15,6 +15,7 @@ a{
     margin: 0;
     box-sizing: border-box;
 }
+ 
 
 header{
     background-color: rgba(0, 0, 0, 0.6);
@@ -157,17 +158,117 @@ body{
 
 .animated-svg{
     width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
     padding: 20px 0;
     overflow: hidden;
 }
 
 .animated-svg svg{
-    width: 100%;
+    width: 300%;
     height: auto;
     display: block;
     background: none;
+    flex-shrink: 0;
 }
+
+.svg-and-text{
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 60px auto;
+    max-width: 1200px;
+    padding: 20px;
+    justify-content: start;
+}
+
+
+
+.svg-and-text svg{
+    width: 300px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.articles{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 40px auto;
+    justify-content: center;
+}
+
+.article-card{
+    width: 320px;
+    box-sizing: border-box;
+    background-color: #ffffffcc;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.article-card img{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+ 
+
+.see-more{
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #f68b1e;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.see-more:hover{
+    background-color: #e57700;
+}
+
+#top-cloud{
+    animation: movecloud 2s infinite alternate ease-in-out;
+}
+@keyframes movecloud{
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(50px);
+    }
+}
+
+@keyframes cloudleftmove{
+    0% { transform: translateX(0);}
+    50% {transform: translateX(-15px);}
+    100% {transform: translateX(0);}
+}
+
+#left-cloud{
+    animation: cloudleftmove 2s ease-in-out infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+@keyframes cloudrightmove{
+    0%{ transform: translateX(0);}
+    50%{transform: translateX(20px);}
+    100%{transform: translateX(0);}
+}
+
+#right-cloud{
+    animation: cloudrightmove 3s ease-in-out infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
 
 
