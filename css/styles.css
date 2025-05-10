@@ -270,5 +270,39 @@ body{
     transform-origin: center;
 }
 
+.animated-text{
+    position: absolute;
+    top: 200px;
+    left: 40px;
+    font-family: "BPG Mikheil Stefane", sans-serif;
+    letter-spacing: 3px;
+}
+
+.typing{
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 2s steps(23) forwards;
+    color: white;
+
+}
+
+@keyframes typing{
+    from {width: 0;}
+    to {width: 30ch;}
+}
+
+@keyframes blink{
+    from, to { border-color: transparent;}
+    50% { border-color: white;}
+}
+
+.side-text{
+    font-family: "BPG Mikheil Stefane", sans-serif;
+    color: beige;
+    letter-spacing: 1px;
+}
+
+
 
 
